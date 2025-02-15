@@ -14,12 +14,12 @@ export default async function PostsList() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
   const posts = await getPosts();
-  const response = await fetch('https://dummyjson.com/posts');
-  const data = await response.json();
+  // const response = await fetch('https://dummyjson.com/posts');
+  // const data = await response.json();
 
   return (
     <ul>
-      {data.posts.map(
+      {posts.map(
         (post: {
           id: Key | null | undefined;
           title:
